@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,130 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="hNA-9a-TxK">
+                                <rect key="frame" x="20" y="28" width="134" height="156"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KjS-sX-Syx">
+                                        <rect key="frame" x="0.0" y="0.0" width="41" height="39"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="Link"/>
+                                        <connections>
+                                            <action selector="linkButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IkR-FW-BHT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQS-Yy-ylV">
+                                        <rect key="frame" x="0.0" y="39" width="86" height="39"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="List Files"/>
+                                        <connections>
+                                            <action selector="listFilesButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M9o-Ve-zHq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGz-Hy-Zvg">
+                                        <rect key="frame" x="0.0" y="78" width="134" height="39"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="Download file"/>
+                                        <connections>
+                                            <action selector="downloadFileButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t3R-wd-xPR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g46-FB-Uhn">
+                                        <rect key="frame" x="0.0" y="117" width="106" height="39"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="Upload file"/>
+                                        <connections>
+                                            <action selector="uploadFileButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N5E-6p-6q7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="g46-FB-Uhn" firstAttribute="leading" secondItem="hNA-9a-TxK" secondAttribute="leading" id="0Ln-2K-fPt"/>
+                                    <constraint firstItem="g46-FB-Uhn" firstAttribute="leading" secondItem="hNA-9a-TxK" secondAttribute="leading" id="0Lr-XG-IIe"/>
+                                    <constraint firstItem="KjS-sX-Syx" firstAttribute="top" secondItem="hNA-9a-TxK" secondAttribute="top" id="0PC-1l-5Bh"/>
+                                    <constraint firstItem="KjS-sX-Syx" firstAttribute="leading" secondItem="hNA-9a-TxK" secondAttribute="leading" id="0Tf-ee-6S7"/>
+                                    <constraint firstAttribute="trailing" secondItem="hGz-Hy-Zvg" secondAttribute="trailing" id="0wh-q9-d06"/>
+                                    <constraint firstItem="g46-FB-Uhn" firstAttribute="bottom" secondItem="hNA-9a-TxK" secondAttribute="bottomMargin" id="2Rs-Eq-tOH"/>
+                                    <constraint firstItem="g46-FB-Uhn" firstAttribute="top" secondItem="hGz-Hy-Zvg" secondAttribute="bottom" id="4E0-tZ-NNI"/>
+                                    <constraint firstItem="g46-FB-Uhn" firstAttribute="leading" secondItem="hNA-9a-TxK" secondAttribute="leading" id="4Zg-o6-VWq"/>
+                                    <constraint firstItem="NQS-Yy-ylV" firstAttribute="leading" secondItem="hNA-9a-TxK" secondAttribute="leading" id="6U1-ny-Jgp"/>
+                                    <constraint firstItem="NQS-Yy-ylV" firstAttribute="top" secondItem="KjS-sX-Syx" secondAttribute="bottom" id="886-G7-kKp"/>
+                                    <constraint firstItem="NQS-Yy-ylV" firstAttribute="leading" secondItem="hNA-9a-TxK" secondAttribute="leading" id="8T3-uA-dYS"/>
+                                    <constraint firstAttribute="bottom" secondItem="g46-FB-Uhn" secondAttribute="bottom" id="B9m-A2-Cml"/>
+                                    <constraint firstAttribute="trailing" secondItem="KjS-sX-Syx" secondAttribute="trailing" constant="93" id="BXW-6k-2aH"/>
+                                    <constraint firstAttribute="bottom" secondItem="g46-FB-Uhn" secondAttribute="bottom" id="DBk-vZ-mOs"/>
+                                    <constraint firstItem="g46-FB-Uhn" firstAttribute="leading" secondItem="hNA-9a-TxK" secondAttribute="leading" id="E0R-gf-b5G"/>
+                                    <constraint firstAttribute="trailing" secondItem="NQS-Yy-ylV" secondAttribute="trailing" constant="48" id="EKf-N3-4ag"/>
+                                    <constraint firstItem="KjS-sX-Syx" firstAttribute="leading" secondItem="g46-FB-Uhn" secondAttribute="leading" id="EkW-I5-nlq"/>
+                                    <constraint firstItem="g46-FB-Uhn" firstAttribute="leading" secondItem="hNA-9a-TxK" secondAttribute="leadingMargin" id="FNr-EI-frx"/>
+                                    <constraint firstItem="KjS-sX-Syx" firstAttribute="leading" secondItem="hNA-9a-TxK" secondAttribute="leading" id="FvU-Jk-AGL"/>
+                                    <constraint firstAttribute="trailing" secondItem="g46-FB-Uhn" secondAttribute="trailing" constant="28" id="Glz-uW-Vcn"/>
+                                    <constraint firstItem="NQS-Yy-ylV" firstAttribute="leading" secondItem="hNA-9a-TxK" secondAttribute="leadingMargin" id="Hcz-wE-8T2"/>
+                                    <constraint firstItem="hGz-Hy-Zvg" firstAttribute="top" secondItem="hNA-9a-TxK" secondAttribute="top" constant="78" id="IfV-ga-A0k"/>
+                                    <constraint firstItem="hGz-Hy-Zvg" firstAttribute="leading" secondItem="KjS-sX-Syx" secondAttribute="leading" id="JFj-zI-nVh"/>
+                                    <constraint firstItem="hGz-Hy-Zvg" firstAttribute="leading" secondItem="hNA-9a-TxK" secondAttribute="leading" id="KQF-W4-jER"/>
+                                    <constraint firstItem="KjS-sX-Syx" firstAttribute="top" secondItem="hNA-9a-TxK" secondAttribute="top" id="Lug-ay-xZd"/>
+                                    <constraint firstItem="hGz-Hy-Zvg" firstAttribute="leading" secondItem="hNA-9a-TxK" secondAttribute="leading" id="Mx3-jG-Fkq"/>
+                                    <constraint firstAttribute="bottom" secondItem="g46-FB-Uhn" secondAttribute="bottom" id="NJl-bY-jlY"/>
+                                    <constraint firstItem="KjS-sX-Syx" firstAttribute="top" secondItem="hNA-9a-TxK" secondAttribute="top" id="NML-eM-CfO"/>
+                                    <constraint firstItem="hGz-Hy-Zvg" firstAttribute="leading" secondItem="g46-FB-Uhn" secondAttribute="leading" id="Nj4-Jq-wuz"/>
+                                    <constraint firstItem="hGz-Hy-Zvg" firstAttribute="centerX" secondItem="hNA-9a-TxK" secondAttribute="centerX" id="OID-dU-sAI"/>
+                                    <constraint firstItem="hGz-Hy-Zvg" firstAttribute="leading" secondItem="hNA-9a-TxK" secondAttribute="leading" id="PRz-mQ-EEy"/>
+                                    <constraint firstAttribute="bottom" secondItem="hGz-Hy-Zvg" secondAttribute="bottom" constant="39" id="T42-C0-WFU"/>
+                                    <constraint firstItem="KjS-sX-Syx" firstAttribute="top" secondItem="hNA-9a-TxK" secondAttribute="topMargin" id="TYj-za-w3M"/>
+                                    <constraint firstItem="KjS-sX-Syx" firstAttribute="leading" secondItem="hNA-9a-TxK" secondAttribute="leading" id="WW8-8z-XzW"/>
+                                    <constraint firstItem="NQS-Yy-ylV" firstAttribute="top" secondItem="hNA-9a-TxK" secondAttribute="top" constant="39" id="aJZ-Ix-xBg"/>
+                                    <constraint firstItem="KjS-sX-Syx" firstAttribute="leading" secondItem="hNA-9a-TxK" secondAttribute="leading" id="cDm-F8-eIH"/>
+                                    <constraint firstItem="g46-FB-Uhn" firstAttribute="top" secondItem="hNA-9a-TxK" secondAttribute="top" constant="117" id="e3E-dH-6Z4"/>
+                                    <constraint firstItem="hGz-Hy-Zvg" firstAttribute="leading" secondItem="hNA-9a-TxK" secondAttribute="leading" id="gDn-ZB-W93"/>
+                                    <constraint firstItem="hGz-Hy-Zvg" firstAttribute="leading" secondItem="hNA-9a-TxK" secondAttribute="leadingMargin" id="gHe-cM-BQb"/>
+                                    <constraint firstItem="hGz-Hy-Zvg" firstAttribute="leading" secondItem="NQS-Yy-ylV" secondAttribute="leading" id="gx7-3q-SCl"/>
+                                    <constraint firstItem="NQS-Yy-ylV" firstAttribute="top" secondItem="hNA-9a-TxK" secondAttribute="top" constant="39" id="hby-ac-kPn"/>
+                                    <constraint firstItem="KjS-sX-Syx" firstAttribute="top" secondItem="hNA-9a-TxK" secondAttribute="top" id="k3v-c1-pc4"/>
+                                    <constraint firstItem="NQS-Yy-ylV" firstAttribute="leading" secondItem="g46-FB-Uhn" secondAttribute="leading" id="klY-Cp-fkv"/>
+                                    <constraint firstItem="hGz-Hy-Zvg" firstAttribute="trailing" secondItem="hNA-9a-TxK" secondAttribute="trailingMargin" id="nHP-ZL-gmj"/>
+                                    <constraint firstItem="NQS-Yy-ylV" firstAttribute="leading" secondItem="hNA-9a-TxK" secondAttribute="leading" id="ouh-8J-ZLq"/>
+                                    <constraint firstItem="NQS-Yy-ylV" firstAttribute="leading" secondItem="hNA-9a-TxK" secondAttribute="leading" id="p1C-9B-boL"/>
+                                    <constraint firstAttribute="trailing" secondItem="hGz-Hy-Zvg" secondAttribute="trailing" id="sEm-G0-LjL"/>
+                                    <constraint firstItem="NQS-Yy-ylV" firstAttribute="leading" secondItem="KjS-sX-Syx" secondAttribute="leading" id="u5P-ig-94e"/>
+                                    <constraint firstItem="hGz-Hy-Zvg" firstAttribute="top" secondItem="NQS-Yy-ylV" secondAttribute="bottom" id="wJ3-nh-LKt"/>
+                                    <constraint firstItem="KjS-sX-Syx" firstAttribute="leading" secondItem="hNA-9a-TxK" secondAttribute="leadingMargin" id="x1N-Tj-Rtp"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xiN-oJ-ZzK">
+                                <rect key="frame" x="20" y="257" width="147" height="30"/>
+                                <state key="normal" title="Create directory"/>
+                                <connections>
+                                    <action selector="createDirectoryButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bHW-Da-oFX"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ypM-LG-txK">
+                                <rect key="frame" x="20" y="214" width="147" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="147" id="gkx-0X-DYg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hNA-9a-TxK" firstAttribute="leading" secondItem="ypM-LG-txK" secondAttribute="leading" id="9zF-nG-RXN"/>
+                            <constraint firstItem="ypM-LG-txK" firstAttribute="leading" secondItem="xiN-oJ-ZzK" secondAttribute="leading" id="Bvh-57-sTZ"/>
+                            <constraint firstItem="ypM-LG-txK" firstAttribute="trailing" secondItem="xiN-oJ-ZzK" secondAttribute="trailing" id="IWz-hm-Hln"/>
+                            <constraint firstItem="hNA-9a-TxK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="MSX-Q0-0C9"/>
+                            <constraint firstItem="hNA-9a-TxK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="Z56-9Z-wWk"/>
+                            <constraint firstItem="xiN-oJ-ZzK" firstAttribute="top" secondItem="ypM-LG-txK" secondAttribute="bottom" constant="13" id="dNd-vO-YoZ"/>
+                            <constraint firstItem="ypM-LG-txK" firstAttribute="top" secondItem="hNA-9a-TxK" secondAttribute="bottom" constant="30" id="wsO-Eh-xJb"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="directoryTextField" destination="ypM-LG-txK" id="xoR-Yt-Efx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="441" y="385"/>
         </scene>
     </scenes>
 </document>

@@ -7,34 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		540359907C0FB77C4FB9B200 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99CDABEBAF419865B30A850B /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		9005A5681BC65D41009E75FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9005A5671BC65D41009E75FD /* main.m */; };
 		9005A56B1BC65D41009E75FD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9005A56A1BC65D41009E75FD /* AppDelegate.m */; };
 		9005A56E1BC65D41009E75FD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9005A56D1BC65D41009E75FD /* ViewController.m */; };
 		9005A5711BC65D41009E75FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9005A56F1BC65D41009E75FD /* Main.storyboard */; };
 		9005A5731BC65D41009E75FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9005A5721BC65D41009E75FD /* Assets.xcassets */; };
 		9005A5761BC65D41009E75FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9005A5741BC65D41009E75FD /* LaunchScreen.storyboard */; };
-		9005A5811BC65D41009E75FD /* Test_Dropbox_APIv2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9005A5801BC65D41009E75FD /* Test_Dropbox_APIv2Tests.m */; };
-		9005A58C1BC65D41009E75FD /* Test_Dropbox_APIv2UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9005A58B1BC65D41009E75FD /* Test_Dropbox_APIv2UITests.m */; };
+		901003461BC67F3A00E907AE /* DropboxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901003451BC67F3A00E907AE /* DropboxService.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		9005A57D1BC65D41009E75FD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9005A55B1BC65D41009E75FD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9005A5621BC65D41009E75FD;
-			remoteInfo = "Test Dropbox APIv2";
-		};
-		9005A5881BC65D41009E75FD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9005A55B1BC65D41009E75FD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9005A5621BC65D41009E75FD;
-			remoteInfo = "Test Dropbox APIv2";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		7F5A128636EE426E84BDD0D1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		8E5423B40B7381B6788147A6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9005A5631BC65D41009E75FD /* Test Dropbox APIv2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Test Dropbox APIv2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9005A5671BC65D41009E75FD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9005A5691BC65D41009E75FD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -45,12 +30,9 @@
 		9005A5721BC65D41009E75FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9005A5751BC65D41009E75FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9005A5771BC65D41009E75FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9005A57C1BC65D41009E75FD /* Test Dropbox APIv2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Test Dropbox APIv2Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9005A5801BC65D41009E75FD /* Test_Dropbox_APIv2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test_Dropbox_APIv2Tests.m; sourceTree = "<group>"; };
-		9005A5821BC65D41009E75FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9005A5871BC65D41009E75FD /* Test Dropbox APIv2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Test Dropbox APIv2UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9005A58B1BC65D41009E75FD /* Test_Dropbox_APIv2UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test_Dropbox_APIv2UITests.m; sourceTree = "<group>"; };
-		9005A58D1BC65D41009E75FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		901003451BC67F3A00E907AE /* DropboxService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropboxService.swift; sourceTree = "<group>"; };
+		90EE880A1BC66657008837E0 /* Test Dropbox APIv2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Test Dropbox APIv2-Bridging-Header.h"; sourceTree = "<group>"; };
+		99CDABEBAF419865B30A850B /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,20 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9005A5791BC65D41009E75FD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9005A5841BC65D41009E75FD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				540359907C0FB77C4FB9B200 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,9 +51,9 @@
 			isa = PBXGroup;
 			children = (
 				9005A5651BC65D41009E75FD /* Test Dropbox APIv2 */,
-				9005A57F1BC65D41009E75FD /* Test Dropbox APIv2Tests */,
-				9005A58A1BC65D41009E75FD /* Test Dropbox APIv2UITests */,
 				9005A5641BC65D41009E75FD /* Products */,
+				D10A5674DB04FC7D9A93A6F7 /* Pods */,
+				EA7906BEF4DB4594B7BD270B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,8 +61,6 @@
 			isa = PBXGroup;
 			children = (
 				9005A5631BC65D41009E75FD /* Test Dropbox APIv2.app */,
-				9005A57C1BC65D41009E75FD /* Test Dropbox APIv2Tests.xctest */,
-				9005A5871BC65D41009E75FD /* Test Dropbox APIv2UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,6 +70,7 @@
 			children = (
 				9005A5691BC65D41009E75FD /* AppDelegate.h */,
 				9005A56A1BC65D41009E75FD /* AppDelegate.m */,
+				901003451BC67F3A00E907AE /* DropboxService.swift */,
 				9005A56C1BC65D41009E75FD /* ViewController.h */,
 				9005A56D1BC65D41009E75FD /* ViewController.m */,
 				9005A56F1BC65D41009E75FD /* Main.storyboard */,
@@ -110,6 +78,7 @@
 				9005A5741BC65D41009E75FD /* LaunchScreen.storyboard */,
 				9005A5771BC65D41009E75FD /* Info.plist */,
 				9005A5661BC65D41009E75FD /* Supporting Files */,
+				90EE880A1BC66657008837E0 /* Test Dropbox APIv2-Bridging-Header.h */,
 			);
 			path = "Test Dropbox APIv2";
 			sourceTree = "<group>";
@@ -122,22 +91,21 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		9005A57F1BC65D41009E75FD /* Test Dropbox APIv2Tests */ = {
+		D10A5674DB04FC7D9A93A6F7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9005A5801BC65D41009E75FD /* Test_Dropbox_APIv2Tests.m */,
-				9005A5821BC65D41009E75FD /* Info.plist */,
+				8E5423B40B7381B6788147A6 /* Pods.debug.xcconfig */,
+				7F5A128636EE426E84BDD0D1 /* Pods.release.xcconfig */,
 			);
-			path = "Test Dropbox APIv2Tests";
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		9005A58A1BC65D41009E75FD /* Test Dropbox APIv2UITests */ = {
+		EA7906BEF4DB4594B7BD270B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9005A58B1BC65D41009E75FD /* Test_Dropbox_APIv2UITests.m */,
-				9005A58D1BC65D41009E75FD /* Info.plist */,
+				99CDABEBAF419865B30A850B /* Pods.framework */,
 			);
-			path = "Test Dropbox APIv2UITests";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,9 +115,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9005A5901BC65D41009E75FD /* Build configuration list for PBXNativeTarget "Test Dropbox APIv2" */;
 			buildPhases = (
+				BC771BF366BB307C46C729FD /* Check Pods Manifest.lock */,
 				9005A55F1BC65D41009E75FD /* Sources */,
 				9005A5601BC65D41009E75FD /* Frameworks */,
 				9005A5611BC65D41009E75FD /* Resources */,
+				EFAA2E8AC32C490A7B0A57CB /* Copy Pods Resources */,
+				F9FF9A72A9C1182D2DDFE6A1 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -160,61 +131,18 @@
 			productReference = 9005A5631BC65D41009E75FD /* Test Dropbox APIv2.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9005A57B1BC65D41009E75FD /* Test Dropbox APIv2Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9005A5931BC65D41009E75FD /* Build configuration list for PBXNativeTarget "Test Dropbox APIv2Tests" */;
-			buildPhases = (
-				9005A5781BC65D41009E75FD /* Sources */,
-				9005A5791BC65D41009E75FD /* Frameworks */,
-				9005A57A1BC65D41009E75FD /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9005A57E1BC65D41009E75FD /* PBXTargetDependency */,
-			);
-			name = "Test Dropbox APIv2Tests";
-			productName = "Test Dropbox APIv2Tests";
-			productReference = 9005A57C1BC65D41009E75FD /* Test Dropbox APIv2Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		9005A5861BC65D41009E75FD /* Test Dropbox APIv2UITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9005A5961BC65D41009E75FD /* Build configuration list for PBXNativeTarget "Test Dropbox APIv2UITests" */;
-			buildPhases = (
-				9005A5831BC65D41009E75FD /* Sources */,
-				9005A5841BC65D41009E75FD /* Frameworks */,
-				9005A5851BC65D41009E75FD /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9005A5891BC65D41009E75FD /* PBXTargetDependency */,
-			);
-			name = "Test Dropbox APIv2UITests";
-			productName = "Test Dropbox APIv2UITests";
-			productReference = 9005A5871BC65D41009E75FD /* Test Dropbox APIv2UITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		9005A55B1BC65D41009E75FD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Freek Sanders";
 				TargetAttributes = {
 					9005A5621BC65D41009E75FD = {
 						CreatedOnToolsVersion = 7.0;
-					};
-					9005A57B1BC65D41009E75FD = {
-						CreatedOnToolsVersion = 7.0;
-						TestTargetID = 9005A5621BC65D41009E75FD;
-					};
-					9005A5861BC65D41009E75FD = {
-						CreatedOnToolsVersion = 7.0;
-						TestTargetID = 9005A5621BC65D41009E75FD;
 					};
 				};
 			};
@@ -232,8 +160,6 @@
 			projectRoot = "";
 			targets = (
 				9005A5621BC65D41009E75FD /* Test Dropbox APIv2 */,
-				9005A57B1BC65D41009E75FD /* Test Dropbox APIv2Tests */,
-				9005A5861BC65D41009E75FD /* Test Dropbox APIv2UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -249,63 +175,69 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9005A57A1BC65D41009E75FD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9005A5851BC65D41009E75FD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BC771BF366BB307C46C729FD /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EFAA2E8AC32C490A7B0A57CB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9FF9A72A9C1182D2DDFE6A1 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9005A55F1BC65D41009E75FD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				901003461BC67F3A00E907AE /* DropboxService.swift in Sources */,
 				9005A56E1BC65D41009E75FD /* ViewController.m in Sources */,
 				9005A56B1BC65D41009E75FD /* AppDelegate.m in Sources */,
 				9005A5681BC65D41009E75FD /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9005A5781BC65D41009E75FD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9005A5811BC65D41009E75FD /* Test_Dropbox_APIv2Tests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9005A5831BC65D41009E75FD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9005A58C1BC65D41009E75FD /* Test_Dropbox_APIv2UITests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		9005A57E1BC65D41009E75FD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9005A5621BC65D41009E75FD /* Test Dropbox APIv2 */;
-			targetProxy = 9005A57D1BC65D41009E75FD /* PBXContainerItemProxy */;
-		};
-		9005A5891BC65D41009E75FD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9005A5621BC65D41009E75FD /* Test Dropbox APIv2 */;
-			targetProxy = 9005A5881BC65D41009E75FD /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		9005A56F1BC65D41009E75FD /* Main.storyboard */ = {
@@ -409,71 +341,30 @@
 		};
 		9005A5911BC65D41009E75FD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E5423B40B7381B6788147A6 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Test Dropbox APIv2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.makemeblue.Test-Dropbox-APIv2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Test Dropbox APIv2/Test Dropbox APIv2-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		9005A5921BC65D41009E75FD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F5A128636EE426E84BDD0D1 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Test Dropbox APIv2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.makemeblue.Test-Dropbox-APIv2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		9005A5941BC65D41009E75FD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = "Test Dropbox APIv2Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.makemeblue.Test-Dropbox-APIv2Tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Test Dropbox APIv2.app/Test Dropbox APIv2";
-			};
-			name = Debug;
-		};
-		9005A5951BC65D41009E75FD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = "Test Dropbox APIv2Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.makemeblue.Test-Dropbox-APIv2Tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Test Dropbox APIv2.app/Test Dropbox APIv2";
-			};
-			name = Release;
-		};
-		9005A5971BC65D41009E75FD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = "Test Dropbox APIv2UITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.makemeblue.Test-Dropbox-APIv2UITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = "Test Dropbox APIv2";
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		9005A5981BC65D41009E75FD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = "Test Dropbox APIv2UITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.makemeblue.Test-Dropbox-APIv2UITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = "Test Dropbox APIv2";
-				USES_XCTRUNNER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Test Dropbox APIv2/Test Dropbox APIv2-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -496,22 +387,7 @@
 				9005A5921BC65D41009E75FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		9005A5931BC65D41009E75FD /* Build configuration list for PBXNativeTarget "Test Dropbox APIv2Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9005A5941BC65D41009E75FD /* Debug */,
-				9005A5951BC65D41009E75FD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		9005A5961BC65D41009E75FD /* Build configuration list for PBXNativeTarget "Test Dropbox APIv2UITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9005A5971BC65D41009E75FD /* Debug */,
-				9005A5981BC65D41009E75FD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
