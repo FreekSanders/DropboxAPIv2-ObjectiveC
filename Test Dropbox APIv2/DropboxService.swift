@@ -42,107 +42,96 @@ public class DropboxService : NSObject {
         return Dropbox.authorizedClient
     }
     
-    public func filesListFolder(path path: String, recursive: Bool = false) -> NSArray? {
+    public func filesListFolder(path path: String, completion:(result: Array<String>?) -> Void) {
         if let client = Dropbox.authorizedClient {
-            client.filesListFolder(path: "").response { response, error in
+            client.filesListFolder(path: path).response { response, error in
                 if let result = response {
-                    print("Folder contents:")
+                    var results = Array<String>()
                     for entry in result.entries {
-                        print(entry.name)
+                        results.append(entry.name)
                     }
+                    completion(result: results)
                 } else {
                     print(error!)
+                    completion(result: nil)
                 }
             }
         }
-        return nil
     }
     
-    public func filesDownload() {
+    public func filesDownload(path path: String, completion:(result: NSData?) -> Void) {
         if let client = Dropbox.authorizedClient {
-            client.filesDownload(path: "/hello.txt").response { response, error in
-                if let (metadata, data) = response {
-                    print("Dowloaded file name: \(metadata.name)")
-                    print("Downloaded file data: \(data)")
+            client.filesDownload(path: path).response { response, error in
+                if let (_, data) = response {
+                    completion(result: data)
                 } else {
                     print(error!)
+                    completion(result: nil)
                 }
             }
         }
     }
     
-    public func filesUpload() {
+    public func filesUpload(path path: String, fileData: NSData, completion:(success: Bool) -> Void) {
         if let client = Dropbox.authorizedClient {
-            let fileData = "Hello!".dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
-            client.filesUpload(path: "/hello.txt", body: fileData!).response { response, error in
-                if let metadata = response {
-                    print("Uploaded file name: \(metadata.name)")
-                    print("Uploaded file revision: \(metadata.rev)")
-                    
-                    // Get file (or folder) metadata
-                    client.filesGetMetadata(path: "/hello.txt").response { response, error in
-                        if let metadata = response {
-                            print("Name: \(metadata.name)")
-                            if let file = metadata as? Files.FileMetadata {
-                                print("This is a file.")
-                                print("File size: \(file.size)")
-                            } else if let folder = metadata as? Files.FolderMetadata {
-                                print("This is a folder: \(folder.name)")
-                            }
-                        } else {
-                            print(error!)
-                        }
-                    }
+            client.filesUpload(path: path, body: fileData).response { response, error in
+                if let _ = response {
+                    completion(success: true)
                 } else {
                     print(error!)
+                    completion(success: false)
                 }
             }
         }
     }
     
-    public func filesCreateFolder(path path: String) {
+    public func filesCreateFolder(path path: String, completion:(success: Bool) -> Void) {
         if let client = Dropbox.authorizedClient {
             client.filesCreateFolder(path: path).response { response, error in
-                if let result = response {
-                    print("created \(result.name)")
+                if let _ = response {
+                    completion(success: true)
                 } else {
                     print(error!)
+                    completion(success: false)
                 }
             }
         }
     }
     
-    public func filesDelete(path path: String) {
+    public func filesDelete(path path: String, completion:(success: Bool) -> Void) {
         if let client = Dropbox.authorizedClient {
             client.filesDelete(path: path).response { response, error in
-                if let result = response {
-                    print("deleted \(result.name)")
+                if let _ = response {
+                    completion(success: true)
                 } else {
                     print(error!)
+                    completion(success: false)
                 }
             }
         }
     }
     
-    public func filesCopy(fromPath fromPath: String, toPath: String) {
+    public func filesCopy(fromPath fromPath: String, toPath: String, completion:(success: Bool) -> Void) {
         if let client = Dropbox.authorizedClient {
             client.filesCopy(fromPath: fromPath, toPath: toPath).response { response, error in
-                if let result = response {
-                    print("copied \(result.name)")
+                if let _ = response {
+                    completion(success: true)
                 } else {
                     print(error!)
+                    completion(success: false)
                 }
             }
         }
     }
     
-    public func filesMove(fromPath fromPath: String, toPath: String) {
+    public func filesMove(fromPath fromPath: String, toPath: String, completion:(success: Bool) -> Void) {
         if let client = Dropbox.authorizedClient {
             client.filesMove(fromPath: fromPath, toPath: toPath).response { response, error in
-                if let result = response {
-                    print("moved \(result.name)")
+                if let _ = response {
+                    completion(success: true)
                 } else {
                     print(error!)
+                    completion(success: false)
                 }
             }
         }

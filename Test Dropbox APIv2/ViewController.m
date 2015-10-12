@@ -27,19 +27,50 @@
 }
 
 - (IBAction)listFilesButtonPressed:(UIButton *)sender {
-    [self.dropbox filesListFolderWithPath:@"" recursive:NO];
+    [self.dropbox filesListFolderWithPath:@"" completion:^(NSArray<NSString *> *files) {
+        if(!files) {
+            NSLog(@"ERROR listing files");
+        }
+        else {
+            for(NSString *file in files) {
+                NSLog(@"%@", file);
+            }
+        }
+    }];
 }
 
 - (IBAction)downloadFileButtonPressed:(UIButton *)sender {
-    [self.dropbox downloadFile];
+    [self.dropbox filesDownloadWithPath:@"/testing.txt" completion:^(NSData *data) {
+        if(!data) {
+            NSLog(@"ERROR downloading file");
+        }
+        else {
+            NSLog(@"%@", data);
+        }
+    }];
 }
 
 - (IBAction)uploadFileButtonPressed:(UIButton *)sender {
-    [self.dropbox uploadFile];
+    NSData *data = [@"Hello SwiftyDropbox!" dataUsingEncoding:NSUTF8StringEncoding];
+    [self.dropbox filesUploadWithPath:@"/testing.txt" fileData:data completion:^(BOOL success) {
+        if(success) {
+            NSLog(@"Upload successful");
+        }
+        else {
+            NSLog(@"ERROR downloading file");
+        }
+    }];
 }
 
 - (IBAction)createDirectoryButtonPressed:(UIButton *)sender {
-    [self.dropbox filesCreateFolderWithPath:self.directoryTextField.text];
+    [self.dropbox filesCreateFolderWithPath:self.directoryTextField.text completion:^(BOOL success) {
+        if(success) {
+            NSLog(@"Folder creation successful");
+        }
+        else {
+            NSLog(@"ERROR downloading file");
+        }
+    }];
 }
 
 @end
